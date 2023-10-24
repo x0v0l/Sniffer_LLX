@@ -31,15 +31,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.protocol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.macSource = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.macDestination = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ipSource = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ipDestination = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataLength = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,16 +71,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.capture_packets);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(765, 101);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(519, 304);
-            this.listBox1.TabIndex = 3;
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(125, 124);
@@ -92,9 +83,11 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
+            this.protocol,
             this.macSource,
             this.macDestination,
             this.ipSource,
@@ -107,7 +100,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(725, 244);
+            this.dataGridView1.Size = new System.Drawing.Size(756, 244);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -118,7 +111,13 @@
             this.id.MinimumWidth = 6;
             this.id.Name = "id";
             this.id.ReadOnly = true;
-            this.id.Width = 50;
+            // 
+            // protocol
+            // 
+            this.protocol.HeaderText = "协议";
+            this.protocol.MinimumWidth = 6;
+            this.protocol.Name = "protocol";
+            this.protocol.ReadOnly = true;
             // 
             // macSource
             // 
@@ -127,7 +126,6 @@
             this.macSource.MinimumWidth = 6;
             this.macSource.Name = "macSource";
             this.macSource.ReadOnly = true;
-            this.macSource.Width = 135;
             // 
             // macDestination
             // 
@@ -136,7 +134,6 @@
             this.macDestination.MinimumWidth = 6;
             this.macDestination.Name = "macDestination";
             this.macDestination.ReadOnly = true;
-            this.macDestination.Width = 128;
             // 
             // ipSource
             // 
@@ -145,7 +142,6 @@
             this.ipSource.MinimumWidth = 6;
             this.ipSource.Name = "ipSource";
             this.ipSource.ReadOnly = true;
-            this.ipSource.Width = 124;
             // 
             // ipDestination
             // 
@@ -154,16 +150,26 @@
             this.ipDestination.MinimumWidth = 6;
             this.ipDestination.Name = "ipDestination";
             this.ipDestination.ReadOnly = true;
-            this.ipDestination.Width = 119;
             // 
             // dataLength
             // 
             this.dataLength.FillWeight = 103.6472F;
-            this.dataLength.HeaderText = "数据段长度";
+            this.dataLength.HeaderText = "数据段长";
             this.dataLength.MinimumWidth = 6;
             this.dataLength.Name = "dataLength";
             this.dataLength.ReadOnly = true;
-            this.dataLength.Width = 116;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.HorizontalScrollbar = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(796, 101);
+            this.listBox1.MultiColumn = true;
+            this.listBox1.Name = "listBox1";
+            this.listBox1.ScrollAlwaysVisible = true;
+            this.listBox1.Size = new System.Drawing.Size(488, 304);
+            this.listBox1.TabIndex = 3;
             // 
             // Form1
             // 
@@ -190,15 +196,16 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn protocol;
         private System.Windows.Forms.DataGridViewTextBoxColumn macSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn macDestination;
         private System.Windows.Forms.DataGridViewTextBoxColumn ipSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn ipDestination;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataLength;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
